@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import './App.css'
+import  Hero  from './component/Hero';
+import Header from './component/Header';
 
 function App() {
  
@@ -7,7 +9,8 @@ function App() {
   return (
     <>
      <div>
-      <h1>cobox</h1>
+     <Header/>
+      <Hero/>
      </div>
     </>
   );
