@@ -53,7 +53,7 @@ const content = [
 ];
 function Home() {
   return (
-    <div >
+    <div>
       <Header />
       <Hero/>
       <div>      
