@@ -3,6 +3,9 @@ import Header from "../component/Header";
 import { Projects } from "../component/Projects";
 import Hero from "../component/Hero";
 import Footers from "../component/Footers";
+// import Parallax from "../component/Demo";
+
+
 const content = [
   {
     title: "Collaborative Editing",
@@ -56,6 +59,9 @@ function Home() {
     <div>
       <Header />
       <Hero/>
+      <div >
+       {/* <Parallax/> */}
+      </div>
       <div>      
       <Projects content={content} />
       </div>
