@@ -76,7 +76,7 @@ const Hero = () => {
 
 
       <motion.div
-  className="bg-green-200 h-80px w-80px rounded-lg flex items-center justify-center relative overflow-hidden p-20"
+  className="h-80px w-80px rounded-lg flex items-center justify-center relative overflow-hidden p-20"
   style={{ y: yBg }}
 >
   {/* Video */}
