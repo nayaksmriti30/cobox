@@ -15,11 +15,11 @@ function Footers() {
       <div className="w-full">
         <div className="grid w-full grid-cols-2 gap-8 px-8 py-8 md:grid-cols-5">
           <div className="col-span-2">
-          <Footer.Brand href="https://flowbite-react.com" src="/favicon.svg">
+          <Footer.Brand href="https://flowbite-react.com" src="">
             <img
-              src="/favicon.svg"
+              src="/logo.png"
               className="mr-3 h-6 sm:h-9"
-              alt="Flowbite React Logo"
+              alt=""
             />
             
           </Footer.Brand>

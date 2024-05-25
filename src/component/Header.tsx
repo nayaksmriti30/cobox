@@ -9,7 +9,7 @@ function Header() {
         <div className="flex items-center !justify-start">
           <Navbar.Brand href="https://flowbite-react.com">
             <img
-              src="/favicon.svg"
+             src="/logo.png"
               className="mr-3 h-6 sm:h-9"
               alt="Flowbite React Logo"
             />
