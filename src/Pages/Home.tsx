@@ -57,10 +57,10 @@ const tabs = [
     title: "Product",
     value: "product",
     content: (
-      <div className="w-full overflow-hidden relative h-[400px] rounded-none shadow-2xl">
+      <div className="w-full h-full overflow-hidden relative rounded-xl shadow-2xl">
 
         <video
-          className="absolute w-full h-[400px] object-cover"
+          className="absolute w-full h-full object-cover "
           autoPlay
           loop
           muted
@@ -74,10 +74,10 @@ const tabs = [
     title: "Services",
     value: "services",
     content: (
-      <div className="w-full overflow-hidden relative h-[600px] rounded-2xl p-10 text-xl md:text-4xl font-bold ">
+      <div className="w-full h-full overflow-hidden relative rounded-none shadow-2xl">
 
         <video
-          className="absolute w-full h-[400px] object-cover"
+          className="absolute w-full h-full object-cover"
           autoPlay
           loop
           muted
@@ -91,10 +91,10 @@ const tabs = [
     title: "Playground",
     value: "playground",
     content: (
-      <div className="w-full overflow-hidden relative h-[400px] rounded-2xl p-10 text-xl md:text-4xl shadow-xl">
+      <div className="w-full h-full overflow-hidden relative rounded-none shadow-2xl">
 
         <video
-          className="absolute w-full h-[400px] object-cover"
+          className="absolute w-full h-full object-cover"
           autoPlay
           loop
           muted
@@ -108,9 +108,16 @@ const tabs = [
     title: "Content",
     value: "content",
     content: (
-      <div className="w-full overflow-hidden relative h-[400px] rounded-2xl p-10 text-xl md:text-4xl font-bold ">
+      <div className="w-full h-full overflow-hidden relative rounded-none shadow-2xl">
 
-        <img src="" alt="" />
+        <video
+          className="absolute w-full h-full object-cover"
+          autoPlay
+          loop
+          muted
+        >
+          <source src="/videoDemo.mp4" type="video/mp4" />
+        </video>
       </div>
     ),
   },
@@ -118,10 +125,10 @@ const tabs = [
     title: "Random",
     value: "random",
     content: (
-      <div className="w-full overflow-hidden relative h-[400px] rounded-2xl p-10 text-xl md:text-4xl font-bold ">
+      <div className="w-full h-full overflow-hidden relative rounded-none shadow-2xl">
 
         <video
-          className="absolute w-full h-[400px] object-cover"
+          className="absolute w-full h-full object-cover"
           autoPlay
           loop
           muted
@@ -138,10 +145,10 @@ const CARDS = [
     name: "Manu Arora",
     designation: "Senior Software Engineer",
     content: (
-      <div className="lg:w-[1200px] w-[800px] overflow-hidden relative h-[400px] rounded-2xl  text-xl md:text-4xl shadow-xl">
+      <div className=" overflow-hidden relative h-[400px] rounded-2xl  text-xl md:text-4xl shadow-xl">
 
         <video
-          className="absolute object-cover"
+          className="absolute h-full object-cover w-full rounded-2xl"
           autoPlay
           loop
           muted
@@ -156,10 +163,10 @@ const CARDS = [
     name: "Elon Musk",
     designation: "Senior Shitposter",
     content: (
-      <div className="lg:w-[1200px] w-[800px] overflow-hidden relative h-[400px] rounded-2xl text-xl md:text-4xl shadow-xl">
+      <div className=" overflow-hidden relative h-[400px] rounded-2xl text-xl md:text-4xl shadow-xl">
 
         <video
-          className="absolute object-cover"
+          className="absolute h-full object-cover w-full rounded-2xl"
           autoPlay
           loop
           muted
@@ -174,10 +181,10 @@ const CARDS = [
     name: "Tyler Durden",
     designation: "Manager Project Mayhem",
     content: (
-      <div className="lg:w-[1200px] w-[800px] overflow-hidden relative h-[400px] rounded-2xl text-xl md:text-4xl shadow-xl">
+      <div className=" overflow-hidden relative h-[400px] rounded-2xl text-xl md:text-4xl shadow-xl">
 
         <video
-          className="absolute  object-cover top-0"
+          className="absolute h-full object-cover top-0 w-full rounded-2xl"
           autoPlay
           loop
           muted
@@ -193,7 +200,7 @@ function Home() {
     <div>
       <Header />
       <Hero />
-      <div className="h-[28rem] flex mt-12 justify-start xl:ml-40 lg:ml-8 mx-3 w-full">
+      <div className="h-[28rem] flex mt-12 justify-center rounded-xl mx-3 mb-4">
         <Demo items={CARDS} />
       </div>
 

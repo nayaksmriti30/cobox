@@ -41,7 +41,7 @@ export const Projects = ({
   });
 
   const backgroundColors = [
-    "var(--slate-900)",
+    "var(--gray-500)",
     "var(--black)",
     "var(--neutral-900)",
   ];
@@ -51,12 +51,12 @@ export const Projects = ({
     "linear-gradient(to bottom right, var(--orange-500), var(--yellow-500))",
   ];
   return (
-    <div className="box2 mt-2">   
+    <div className="mx-3 mt-2">   
     <motion.div
       animate={{
         backgroundColor: backgroundColors[activeCard % backgroundColors.length],
       }}
-      className="h-[30rem] overflow-y-auto flex justify-center relative space-x-10 rounded-none p-10 project"
+      className="h-[30rem] overflow-y-auto flex justify-center relative rounded-xl p-10 project max-w-5xl mx-auto "
       ref={ref}
     >
       <div className="div relative flex items-start px-4">

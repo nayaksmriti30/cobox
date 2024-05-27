@@ -24,28 +24,28 @@ export const Demo = ({
   const SCALE_FACTOR = scaleFactor || 0.06;
   const [cards, setCards] = useState<Card[]>(items);
 
-  useEffect(() => {
-    startFlipping();
+//   useEffect(() => {
+//     startFlipping();
 
-    return () => clearInterval(interval);
-  }, []);
+//     return () => clearInterval(interval);
+//   }, []);
   const startFlipping = () => {
     interval = setInterval(() => {
       setCards((prevCards: Card[]) => {
-        const newArray = [...prevCards]; // create a copy of the array
-        newArray.unshift(newArray.pop()!); // move the last element to the front
+        const newArray = [...prevCards]; 
+        newArray.unshift(newArray.pop()!); 
         return newArray;
       });
     }, 5000);
   };
 
   return (
-    <div className="relative  h-60 w-60 md:h-60 md:w-96">
+    <div className="relative  w-full ml-4 max-w-5xl">
       {cards.map((card, index) => {
         return (
           <motion.div
             key={card?.id}
-            className="absolute dark:bg-black bg-white h-[400px] w-[1200px] rounded-3xl p-4 shadow-xl border border-neutral-200 dark:border-white/[0.1]  shadow-black/[0.1] dark:shadow-white/[0.05] flex flex-col justify-between"
+            className="absolute dark:bg-black bg-[#fff] h-[400px] w-full m-auto rounded-3xl p-4 shadow-xl border border-[#000] dark:border-white/[0.1]  shadow-black/[0.1] dark:shadow-white/[0.05] "
             style={{
               transformOrigin: "top center",
             }}
