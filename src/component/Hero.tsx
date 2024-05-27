@@ -40,7 +40,7 @@ const Hero = () => {
   const yBg = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
   return (
-    <div className="hero_container px-4" ref={ref}>
+    <div className="hero_container " ref={ref}>
       <div
         className="relative flex flex-col items-center justify-center text-white overflow-hidden py-40"
         // style={{ y: yBg }}

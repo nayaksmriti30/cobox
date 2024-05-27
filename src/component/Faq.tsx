@@ -37,7 +37,7 @@ export function Faq({ header, ...rest }) {
 
 return (
     <div>
-        <BackgroundGradient className="rounded-sm m-auto py-12 px-4 shadow-xl max-w-5xl">
+        <BackgroundGradient className="rounded-sm m-auto p-4 shadow-xl max-w-5xl">
         <div className="container mx-auto">
             <Accordion transition transitionTimeout={200} className="max-w-5xl lg:px-0 px-4 m-auto " >
                 <AccordionItem header="What is Lorem Ipsum?" initialEntered>

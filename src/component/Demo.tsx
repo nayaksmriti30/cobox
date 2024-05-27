@@ -24,11 +24,11 @@ export const Demo = ({
   const SCALE_FACTOR = scaleFactor || 0.06;
   const [cards, setCards] = useState<Card[]>(items);
 
-//   useEffect(() => {
-//     startFlipping();
+  useEffect(() => {
+    startFlipping();
 
-//     return () => clearInterval(interval);
-//   }, []);
+    return () => clearInterval(interval);
+  }, []);
   const startFlipping = () => {
     interval = setInterval(() => {
       setCards((prevCards: Card[]) => {
