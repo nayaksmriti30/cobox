@@ -8,7 +8,8 @@ import Footers from "../component/Footers";
 import { GameMaker } from "../component/GameMaker";
 import { Faq } from "../component/Faq";
 import { Demo } from "../component/Demo";
-
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import 'react-tabs/style/react-tabs.css';
 
 const content = [
   {
@@ -16,18 +17,20 @@ const content = [
     description:
       "Work together in real time with your team, clients, and stakeholders. Collaborate on documents, share ideas, and make decisions quickly. With our platform, you can streamline your workflow and increase productivity.",
     content: (
-      <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
-        Collaborative Editing
+      <div className="h-full border-[25px] border-gray-700 shadow-xl shadow-white w-full rounded-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white transition duration-150">
+        <img src="/svg1.png" alt="" className="w-[400px] ease-out duration-300 scale-125" />
       </div>
     ),
+
+
   },
   {
     title: "Real time changes",
     description:
       "See changes as they happen. With our platform, you can track every modification in real time. No more confusion about the latest version of your project. Say goodbye to the chaos of version control and embrace the simplicity of real-time updates.",
     content: (
-      <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--orange-500),var(--yellow-500))] flex items-center justify-center text-white">
-        control
+      <div className=" border-[25px] border-gray-700 shadow-xl shadow-white w-full rounded-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white transition duration-150">
+        <img src="/svg2.png" alt="" className="w-[300px] ease-out duration-300  scale-105" />
       </div>
     ),
   },
@@ -36,8 +39,8 @@ const content = [
     description:
       "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
     content: (
-      <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--orange-500),var(--yellow-500))] flex items-center justify-center text-white">
-        Version control
+      <div className="h-full border-[25px] border-gray-700 shadow-xl shadow-white w-full rounded-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white transition duration-150">
+        <img src="/svg1.png" alt="" className="w-[400px] ease-out duration-300  scale-105" />
       </div>
     ),
   },
@@ -46,8 +49,8 @@ const content = [
     description:
       "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
     content: (
-      <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
-        Running out of content
+      <div className="h-full border-[25px] border-gray-700 shadow-xl shadow-white w-full rounded-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white transition duration-150">
+        <img src="/svg2.png" alt="" className="w-[300px] ease-out duration-300  scale-105" />
       </div>
     ),
   },
@@ -207,6 +210,8 @@ function Home() {
       <div>
         <GameMaker tabs={tabs} />
       </div>
+      
+
       <div>
         <Projects content={content} />
       </div>

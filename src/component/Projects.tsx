@@ -12,6 +12,7 @@ export const Projects = ({
     title: string;
     description: string;
     content?: React.ReactNode | any;
+    image?: React.ReactNode | any;
   }[];
   contentClassName?: string;
 }) => {
@@ -41,67 +42,113 @@ export const Projects = ({
   });
 
   const backgroundColors = [
-    "var(--gray-500)",
+    "var(--gray-900)",
     "var(--black)",
     "var(--neutral-900)",
   ];
   const linearGradients = [
-    "linear-gradient(to bottom right, var(--cyan-500), var(--emerald-500))",
-    "linear-gradient(to bottom right, var(--pink-500), var(--indigo-500))",
-    "linear-gradient(to bottom right, var(--orange-500), var(--yellow-500))",
+    "transparent",
+    "transparent",
+    "transparent",
   ];
+  console.log(content[activeCard].image )
   return (
-    <div className="mx-3 mt-2">   
-    <motion.div
-      animate={{
-        backgroundColor: backgroundColors[activeCard % backgroundColors.length],
-      }}
-      className="h-[30rem] overflow-y-auto flex justify-center relative rounded-xl p-10 project max-w-5xl mx-auto "
-      ref={ref}
-    >
-      <div className="div relative flex items-start px-4">
-        <div className="max-w-2xl">
-          {content.map((item, index) => (
-            <div key={item.title + index} className="my-20">
-              <motion.h2
-                initial={{
-                  opacity: 0,
-                }}
-                animate={{
-                  opacity: activeCard === index ? 1 : 0.3,
-                }}
-                className="text-2xl font-bold text-slate-100"
-              >
-                {item.title}
-              </motion.h2>
-              <motion.p
-                initial={{
-                  opacity: 0,
-                }}
-                animate={{
-                  opacity: activeCard === index ? 1 : 0.3,
-                }}
-                className="text-kg text-slate-300 max-w-sm mt-10"
-              >
-                {item.description}
-              </motion.p>
-            </div>
-          ))}
-          <div className="h-40" />
-        </div>
-      </div>
+    <div className="mx-3 mt-2">
       <motion.div
         animate={{
-          background: linearGradients[activeCard % linearGradients.length],
+          backgroundColor: backgroundColors[activeCard % backgroundColors.length],
         }}
-        className={cn(
-          "hidden lg:block h-60 w-80 rounded-md bg-white sticky top-10 overflow-hidden",
-          contentClassName
-        )}
+        className="h-[50rem] overflow-y-auto grid grid-cols-2 relative rounded-xl md:p-10 p-3 project mx-auto "
+        ref={ref}
       >
-        {content[activeCard].content ?? null}
+        <div className="div relative flex items-start px-4">
+          <div className="max-w-3xl ">
+            {content.map((item, index) => (
+              <div key={item.title + index} className="my-20">
+                <div className="flex">
+
+
+                  <motion.h2
+                    initial={{
+                      opacity: 0,
+                    }}
+                    animate={{
+                      opacity: activeCard === index ? 1 : 0.3,
+                    }}
+                    className="text-4xl font-bold text-slate-100 mx-12"
+                  >
+                    {index + 1}
+                  </motion.h2>
+
+                  <div>
+
+
+                    <motion.h2
+                      initial={{
+                        opacity: 0,
+                      }}
+                      animate={{
+                        opacity: activeCard === index ? 1 : 0.3,
+                      }}
+                      className="text-[60px]  font-bold text-slate-100"
+                    >
+                      {item.title}
+                    </motion.h2>
+                    <motion.p
+                      initial={{
+                        opacity: 0,
+                      }}
+                      animate={{
+                        opacity: activeCard === index ? 1 : 0.3,
+                      }}
+                      className="text-3xl text-slate-300 max-w-xl mt-16
+                      "
+                    >
+                      {item.description}
+                    </motion.p>
+                    <motion.p
+                      initial={{
+                        opacity: 0,
+                      }}
+                      animate={{
+                        opacity: activeCard === index ? 1 : 0.3,
+                      }}
+                      className="text-3xl text-slate-300 max-w-xl mt-16
+                      "
+                    >
+                      <button className="btn-black">Describe</button>
+                      <button className="btn-white">Docs</button>
+                    </motion.p>
+                  </div>
+                </div>
+              </div>
+            ))}
+            <div className="h-40" />
+          </div>
+        </div>
+        <motion.div
+          animate={{
+            background: linearGradients[activeCard % linearGradients.length],
+          }}
+          className={cn(
+            "hidden lg:block w-[500px] h-[500px] border-1 right-project border-white  rounded-full mx-auto bg-white sticky top-32 overflow-hidden",
+            contentClassName
+          )}
+        >
+          {content[activeCard].content ?? null}
+        </motion.div>
+        {/* <motion.div
+         
+          className={cn(
+            "hidden lg:block w-[500px] h-[500px] border-1 right-project border-white  rounded-full mx-auto overflow-hidden",
+            contentClassName
+          )}
+        >
+          {content[activeCard].image ?? null}
+         
+        </motion.div> */}
+       
       </motion.div>
-    </motion.div>
     </div>
   );
 };

@@ -12,8 +12,13 @@ interface FooterLinkGroupProps extends React.ComponentPropsWithoutRef<typeof Foo
 function Footers() {
   return (
     <Footer bgDark className="rounded-none bg-[#14181d] ">
+     
+
+      
       <div className="w-full">
-        <div className="grid w-full grid-cols-2 gap-8 px-8 py-8 md:grid-cols-5">
+      <div className="container mx-auto">
+        <div className="grid w-full grid-cols-2 gap-8 px-8 py-8 md:grid-cols-4">
+          
           <div className="col-span-2">
           <Footer.Brand href="https://flowbite-react.com" src="">
             <img
@@ -45,6 +50,7 @@ function Footers() {
             </Footer.LinkGroup>
           </div>
         </div>
+      </div>
       </div>
     </Footer>
   );

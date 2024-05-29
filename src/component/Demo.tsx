@@ -40,12 +40,12 @@ export const Demo = ({
   };
 
   return (
-    <div className="relative  w-full ml-4 max-w-5xl">
-      {cards.map((card, index) => {
+    <div className="relative  w-full ml-4 ">
+      {cards?.map((card, index) => {
         return (
           <motion.div
             key={card?.id}
-            className="absolute dark:bg-black bg-[#fff] h-[400px] w-full m-auto rounded-3xl p-4 shadow-xl border border-[#000] dark:border-white/[0.1]  shadow-black/[0.1] dark:shadow-white/[0.05] "
+            className="absolute dark:bg-black bg-[#000] h-[400px] w-full m-auto rounded-3xl p-4 shadow-xl border border-[#000] dark:border-white/[0.1]  shadow-black/[0.1] dark:shadow-white/[0.05] "
             style={{
               transformOrigin: "top center",
             }}
