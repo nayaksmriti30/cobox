@@ -68,11 +68,12 @@ const Hero = () => {
           <motion.h1 className="text-5xl md:text-7xl font-bold mb-4" variants={textVariants}>Welcome to The Cobox</motion.h1>
           <motion.p className="text-lg md:text-2xl mb-6" variants={textVariants}>Create, Own, and Monetize Your Gaming Experiences</motion.p>
           <div className="flex items-center">
-          <motion.button className="bg-blue-500 mr-3 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded" variants={textVariants}>
-           Demo
+          <motion.button className=" font-bold py-3 px-6 rounded" variants={textVariants}>
+          <button className="btn-black hover:bg-transparent text-black">Describe</button>
+                      
           </motion.button>
-          <motion.button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded" variants={textVariants}>
-           Join Us
+          <motion.button className="font-bold py-3 px-6 rounded" variants={textVariants}>
+          <button className="btn-white">Docs</button>
           </motion.button>
           </div>
         </motion.div>

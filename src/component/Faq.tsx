@@ -26,7 +26,7 @@ export function Faq({ header, ...rest }) {
         className="border-b"
         buttonProps={{
             className: ({ isEnter }) =>
-                `flex w-full p-4 text-left hover:bg-[#030637] ${isEnter && "bg-[#720455]"
+                `flex w-full p-4 text-left hover:bg-[#030637] ${isEnter && "bg-[#000]"
                 }`
         }}
         contentProps={{
@@ -37,9 +37,9 @@ export function Faq({ header, ...rest }) {
 
 return (
     <div>
-        <BackgroundGradient className="rounded-sm m-auto p-4 shadow-xl max-w-5xl">
+        <BackgroundGradient className="rounded-sm m-auto p-4 shadow-xl ">
         <div className="container mx-auto">
-            <Accordion transition transitionTimeout={200} className="max-w-5xl lg:px-0 px-4 m-auto " >
+            <Accordion transition transitionTimeout={200} className="lg:px-0 px-4 m-auto " >
                 <AccordionItem header="What is Lorem Ipsum?" initialEntered>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                     eiusmod tempor incididunt ut labore et dolore magna aliqua.

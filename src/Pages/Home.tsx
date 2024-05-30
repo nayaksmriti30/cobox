@@ -13,11 +13,11 @@ import 'react-tabs/style/react-tabs.css';
 
 const content = [
   {
-    title: "Collaborative Editing",
+    title: "Collaborative ",
     description:
       "Work together in real time with your team, clients, and stakeholders. Collaborate on documents, share ideas, and make decisions quickly. With our platform, you can streamline your workflow and increase productivity.",
     content: (
-      <div className="h-full border-[25px] border-gray-700 shadow-xl shadow-white w-full rounded-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white transition duration-150">
+      <div className="h-full w-full rounded-full flex items-center justify-center text-white">
         <img src="/svg1.png" alt="" className="w-[400px] ease-out duration-300 scale-125" />
       </div>
     ),
@@ -25,31 +25,31 @@ const content = [
 
   },
   {
-    title: "Real time changes",
+    title: "Experience",
     description:
       "See changes as they happen. With our platform, you can track every modification in real time. No more confusion about the latest version of your project. Say goodbye to the chaos of version control and embrace the simplicity of real-time updates.",
     content: (
-      <div className=" border-[25px] border-gray-700 shadow-xl shadow-white w-full rounded-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white transition duration-150">
+      <div className="  w-full rounded-full  flex items-center justify-center text-white ">
         <img src="/svg2.png" alt="" className="w-[300px] ease-out duration-300  scale-105" />
       </div>
     ),
   },
   {
-    title: "Version control",
+    title: "Influence",
     description:
       "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
     content: (
-      <div className="h-full border-[25px] border-gray-700 shadow-xl shadow-white w-full rounded-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white transition duration-150">
+      <div className="h-full  w-full rounded-full flex items-center justify-center text-white ">
         <img src="/svg1.png" alt="" className="w-[400px] ease-out duration-300  scale-105" />
       </div>
     ),
   },
   {
-    title: "Running out of content",
+    title: "Expertise",
     description:
       "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
     content: (
-      <div className="h-full border-[25px] border-gray-700 shadow-xl shadow-white w-full rounded-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white transition duration-150">
+      <div className="h-full  w-full rounded-full  flex items-center justify-center text-white">
         <img src="/svg2.png" alt="" className="w-[300px] ease-out duration-300  scale-105" />
       </div>
     ),
@@ -148,10 +148,10 @@ const CARDS = [
     name: "Manu Arora",
     designation: "Senior Software Engineer",
     content: (
-      <div className=" overflow-hidden relative h-[400px] rounded-2xl  text-xl md:text-4xl shadow-xl">
+      <div className=" overflow-hidden relative h-[400px] text-xl md:text-4xl shadow-xl">
 
         <video
-          className="absolute h-full object-cover w-full rounded-2xl"
+          className="absolute h-full object-cover w-full "
           autoPlay
           loop
           muted
@@ -166,10 +166,10 @@ const CARDS = [
     name: "Elon Musk",
     designation: "Senior Shitposter",
     content: (
-      <div className=" overflow-hidden relative h-[400px] rounded-2xl text-xl md:text-4xl shadow-xl">
+      <div className=" overflow-hidden relative h-[400px] text-xl md:text-4xl shadow-xl">
 
         <video
-          className="absolute h-full object-cover w-full rounded-2xl"
+          className="absolute h-full object-cover w-full "
           autoPlay
           loop
           muted
@@ -184,10 +184,10 @@ const CARDS = [
     name: "Tyler Durden",
     designation: "Manager Project Mayhem",
     content: (
-      <div className=" overflow-hidden relative h-[400px] rounded-2xl text-xl md:text-4xl shadow-xl">
+      <div className=" overflow-hidden relative h-[400px] text-xl md:text-4xl shadow-xl">
 
         <video
-          className="absolute h-full object-cover top-0 w-full rounded-2xl"
+          className="absolute h-full object-cover top-0 w-full"
           autoPlay
           loop
           muted
@@ -203,7 +203,7 @@ function Home() {
     <div>
       <Header />
       <Hero />
-      <div className="h-[28rem] flex mt-12 justify-center rounded-xl mx-3 mb-4">
+      <div className="h-[28rem] flex mt-12 justify-center shadow-inner mb-2">
         <Demo items={CARDS} />
       </div>
 

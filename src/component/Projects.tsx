@@ -42,7 +42,7 @@ export const Projects = ({
   });
 
   const backgroundColors = [
-    "var(--gray-900)",
+    "var(--black)",
     "var(--black)",
     "var(--neutral-900)",
   ];
@@ -53,7 +53,7 @@ export const Projects = ({
   ];
   console.log(content[activeCard].image )
   return (
-    <div className="mx-3 mt-2">
+    <div className=" mt-2">
       <motion.div
         animate={{
           backgroundColor: backgroundColors[activeCard % backgroundColors.length],
@@ -90,7 +90,7 @@ export const Projects = ({
                       animate={{
                         opacity: activeCard === index ? 1 : 0.3,
                       }}
-                      className="text-[60px]  font-bold text-slate-100"
+                      className="text-[80px]  font-extrabold text-slate-100"
                     >
                       {item.title}
                     </motion.h2>
@@ -101,7 +101,7 @@ export const Projects = ({
                       animate={{
                         opacity: activeCard === index ? 1 : 0.3,
                       }}
-                      className="text-3xl text-slate-300 max-w-xl mt-16
+                      className="text-2xl text-slate-300 max-w-xl mt-16
                       "
                     >
                       {item.description}
@@ -127,11 +127,11 @@ export const Projects = ({
           </div>
         </div>
         <motion.div
-          animate={{
-            background: linearGradients[activeCard % linearGradients.length],
-          }}
+          // animate={{
+          //   background: linearGradients[activeCard % linearGradients.length],
+          // }}
           className={cn(
-            "hidden lg:block w-[500px] h-[500px] border-1 right-project border-white  rounded-full mx-auto bg-white sticky top-32 overflow-hidden",
+            "hidden lg:block w-[500px] h-[500px] border-1 right-project  rounded-full mx-auto bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] sticky top-32 overflow-hidden  border-[25px] border-gray-700 shadow-xl shadow-white",
             contentClassName
           )}
         >

@@ -23,7 +23,7 @@ export const BackgroundGradient = ({
   };
   return (
     <div className="mx-3">   
-    <div className={cn("relative m-auto group max-w-5xl mt-2  mb-4", containerClassName)}>
+    <div className={cn("relative m-auto group mt-2  mb-4", containerClassName)}>
       <motion.div
         variants={animate ? variants : undefined}
         initial={animate ? "initial" : undefined}
@@ -42,7 +42,7 @@ export const BackgroundGradient = ({
         }}
         className={cn(
           "absolute inset-0 rounded-xl z-[1]  group-hover:opacity-100 transition duration-500 will-change-transform",
-          " bg-white"
+        
         )}
       />
       <motion.div

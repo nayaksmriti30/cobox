@@ -12,12 +12,12 @@ type Tab = {
 
 export const GameMaker = ({ tabs: propTabs }: { tabs: Tab[] }) => {
   return (
-    <div className="m-3 ">
-      <div className="w-full bg-[#000] rounded-xl">
+    <div className=" ">
+      <div className="w-full bg-[#000] ">
         <div className="flex flex-row items-center sm:justify-center [perspective:1000px] relative overflow-auto sm:overflow-visible no-visible-scrollbar max-w-full w-full mt-4 ">
-          <Tabs className="w-full text-center">
+          <Tabs className="w-full text-center pb-4">
             <TabPanel className="tabpanel bg-slate-300">
-              <div className="w-full h-full overflow-hidden relative rounded-xl shadow-2xl">
+              <div className="w-full h-full overflow-hidden relative shadow-[#cecccc] shadow-2xl">
                 <video
                   className="absolute w-full h-full object-cover "
                   autoPlay
@@ -29,7 +29,7 @@ export const GameMaker = ({ tabs: propTabs }: { tabs: Tab[] }) => {
               </div>
             </TabPanel>
             <TabPanel className="tabpanel bg-slate-300">
-              <div className="w-full h-full overflow-hidden relative rounded-xl shadow-2xl">
+              <div className="w-full h-full overflow-hidden relative rounded-xl shadow-[#cecccc] shadow-2xl">
                 <video
                   className="absolute w-full h-full object-cover "
                   autoPlay
@@ -41,7 +41,19 @@ export const GameMaker = ({ tabs: propTabs }: { tabs: Tab[] }) => {
               </div>
             </TabPanel>
             <TabPanel className="tabpanel bg-slate-300">
-              <div className="w-full h-full overflow-hidden relative rounded-xl shadow-2xl">
+              <div className="w-full h-full overflow-hidden relative rounded-xl shadow-[#cecccc] shadow-2xl">
+                <video
+                  className="absolute w-full h-full object-cover "
+                  autoPlay
+                  loop
+                  muted
+                >
+                  <source src="/videoDemo.mp4" type="video/mp4" />
+                </video>
+              </div>
+            </TabPanel>
+            <TabPanel className="tabpanel bg-slate-300">
+              <div className="w-full h-full overflow-hidden relative rounded-xl shadow-[#cecccc] shadow-2xl">
                 <video
                   className="absolute w-full h-full object-cover "
                   autoPlay
@@ -57,6 +69,7 @@ export const GameMaker = ({ tabs: propTabs }: { tabs: Tab[] }) => {
               <Tab>Product</Tab>
               <Tab>Source</Tab>
               <Tab>Home</Tab>
+              <Tab>Games</Tab>
             </TabList>
           </Tabs>
         </div>
